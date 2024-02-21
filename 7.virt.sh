@@ -1,0 +1,1 @@
+sudo apt install qemu-kvm -y && sudo apt install libvirt-daemon-system libvirt-clients -y && sudo adduser $USER kvm && sudo apt install virt-manager -y

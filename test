@@ -71,11 +71,23 @@ libreoffice
 ==============
 sudo dpkg -i *.deb
 
+
+
+
+
 Jdownloader
 ==============
 sudo apt install default-jre -y
+
 chmod +x JDownloader2Setup*.sh
 ./JDownloader2Setup*.sh
+
+
+
+
+
+
+
 
 vdhcoapp-linux-x86_64.deb 
 ==============================
