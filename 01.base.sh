@@ -5,7 +5,6 @@ sudo apt install xfce4-screenshooter xfce4-pulseaudio-plugin software-properties
 sudo apt-add-repository contrib non-free -y
 sudo apt install network-manager -y && sudo apt install network-manager-gnome -y && sudo systemctl enable NetworkManager.service
 sudo apt install unrar smplayer smplayer-l10n thunar-archive-plugin neofetch apt-transport-https curl git build-essential meson itstool libtool pkg-config intltool libicu-dev libpcre2-dev libglib2.0-dev libgtk-3-dev libxml2-utils -y
-git clone https://github.com/cboxdoerfer/fsearch.git && cd fsearch/ && meson builddir && ninja -C builddir install
 sudo apt install dirmngr  lsb-release ca-certificates -y    
 mkdir ~/xremotox
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null
