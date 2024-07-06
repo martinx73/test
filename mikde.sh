@@ -1,7 +1,7 @@
 sudo apt install plasma-desktop sddm -y
 sudo apt-add-repository contrib non-free -y
 sudo apt install kde-plasma-desktop -y
-sudo apt install apt-transport-https curl freerdp2-x11 filezilla p7zip-full p7zip-rar rar unrar ffmpeg libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-pulseaudio vorbis-tools mpv kde-spectacle gwenview ark bleachbit -y
+sudo apt install apt-transport-https curl freerdp2-x11 filezilla p7zip-full p7zip-rar rar unrar ffmpeg libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-pulseaudio vorbis-tools mpv kde-spectacle gwenview ark bleachbit wakeonlan -y
 sudo apt install ufw -y && sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw enable
 curl -fSsL https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/google-chrome.gpg >> /dev/null && echo deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main | sudo tee /etc/apt/sources.list.d/google-chrome.list && sudo apt update && sudo apt install google-chrome-stable -y
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
