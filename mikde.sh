@@ -15,8 +15,9 @@ curl -fsSL https://download.opensuse.org/repositories/home:smplayerdev/Debian_12
 wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.12.0/fastfetch-linux-amd64.deb
 sudo dpkg -i fastfetch-linux-amd64.deb
 sudo mkdir /mnt/DATA /mnt/Sharing
-echo "UUID=1695b72c-9157-4df9-9544-fba85448b078  /mnt/DATA  ext4  defaults  0  2" | sudo tee -a /etc/fstab
-echo "UUID=9CEC4A57EC4A2C38                      /mnt/Sharing ntfs  defaults  0  2" | sudo tee -a /etc/fstab
-sudo rm -rf /home/martinx73/Downloads && ln -s /mnt/DATA/Downloads /home/martinx73/Downloads
-sudo rm -rf /home/martinx73/Desktop && ln -s /mnt/DATA/Desktop /home/martinx73/Desktop
+#echo "UUID=1695b72c-9157-4df9-9544-fba85448b078  /mnt/DATA  ext4  defaults  0  2" | sudo tee -a /etc/fstab
+#echo "UUID=9CEC4A57EC4A2C38                      /mnt/Sharing ntfs  defaults  0  2" | sudo tee -a /etc/fstab
+#sudo rm -rf /home/martinx73/Downloads && ln -s /mnt/DATA/Downloads /home/martinx73/Downloads
+#sudo rm -rf /home/martinx73/Desktop && ln -s /mnt/DATA/Desktop /home/martinx73/Desktop
+sudo apt autoremove
 sudo reboot
