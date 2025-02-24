@@ -6,6 +6,7 @@ curl -fSsL https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmo
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo apt install unrar sublime-text google-chrome-stable -y
 curl -fsS https://dl.brave.com/install.sh | sh
+curl -sSLf https://github.com/aclap-dev/vdhcoapp/releases/latest/download/install.sh | bash
 mkdir ~/xremotox
 sudo mkdir /mnt/data/
 sudo ufw default deny incoming
