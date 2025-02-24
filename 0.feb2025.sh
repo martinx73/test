@@ -7,9 +7,11 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo apt install unrar sublime-text google-chrome-stable -y
 curl -fsS https://dl.brave.com/install.sh | sh
 mkdir ~/xremotox
+sudo mkdir /mnt/data/
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw enable
 sudo systemctl enable NetworkManager.service
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+#echo 'UUID="A20EB1550EB12369" /mnt/data/ ntfs 0 2' | sudo tee -a /etc/fstab
 sudo reboot
