@@ -13,5 +13,5 @@ sudo ufw default allow outgoing
 sudo ufw enable
 sudo systemctl enable NetworkManager.service
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
-#echo 'UUID="A20EB1550EB12369" /mnt/data/ ntfs 0 2' | sudo tee -a /etc/fstab
+echo 'UUID="A20EB1550EB12369" /mnt/data/ ntfs 0 2' | sudo tee -a /etc/fstab
 sudo reboot
