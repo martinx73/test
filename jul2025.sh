@@ -21,4 +21,5 @@ sudo sed -i '8c\XDG_DESKTOP_DIR="/mnt/data/x/Desktop"' ~/.config/user-dirs.dirs
 sudo sed -i '9c\XDG_DOWNLOAD_DIR="/mnt/data/x/Downloads"' ~/.config/user-dirs.dirs
 sudo rm -rf /home/martinx73/Downloads
 ln -s /mnt/data/x/Downloads/ /home/martinx73
+sudo systemctl status sleep.target suspend.target hibernate.target hybrid-sleep.target
 sudo reboot
