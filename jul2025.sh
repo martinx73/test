@@ -20,6 +20,11 @@ sudo apt update && sudo apt install codium -y
 sudo sed -i '8c\XDG_DESKTOP_DIR="/mnt/data/x/Desktop"' ~/.config/user-dirs.dirs
 sudo sed -i '9c\XDG_DOWNLOAD_DIR="/mnt/data/x/Downloads"' ~/.config/user-dirs.dirs
 sudo rm -rf /home/martinx73/Downloads
+sudo rm -rf /home/martinx73/Desktop
 ln -s /mnt/data/x/Downloads/ /home/martinx73
+ln -s /mnt/data/x/Desktop/ /home/martinx73
 sudo systemctl status sleep.target suspend.target hibernate.target hybrid-sleep.target
+curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
+sudo -E bash nodesource_setup.sh
+sudo apt-get install ffmpeg nodejs -y
 sudo reboot
