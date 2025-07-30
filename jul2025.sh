@@ -1,4 +1,4 @@
-sudo apt install curl ufw freerdp2-x11 -y && sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw enable
+sudo apt install gparted curl ufw freerdp2-x11 -y && sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw enable
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo tee /etc/apt/keyrings/sublimehq-pub.asc > /dev/null
 echo -e 'Types: deb\nURIs: https://download.sublimetext.com/\nSuites: apt/stable/\nSigned-By: /etc/apt/keyrings/sublimehq-pub.asc' | sudo tee /etc/apt/sources.list.d/sublime-text.sources
 sudo apt install software-properties-common -y && sudo apt-add-repository contrib non-free -y
@@ -27,4 +27,7 @@ sudo systemctl status sleep.target suspend.target hibernate.target hybrid-sleep.
 curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 sudo -E bash nodesource_setup.sh
 sudo apt-get install ffmpeg nodejs -y
+touch ~/.config/gtk-3.0/bookmarks
+echo 'file:///home/martinx73/Downloads' | sudo tee -a ~/.config/gtk-3.0/bookmarks
+echo 'file:///mnt/data' | sudo tee -a ~/.config/gtk-3.0/bookmarks
 sudo reboot
