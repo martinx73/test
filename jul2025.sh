@@ -29,5 +29,7 @@ sudo -E bash nodesource_setup.sh
 sudo apt-get install ffmpeg nodejs -y
 touch ~/.config/gtk-3.0/bookmarks
 echo 'file:///home/martinx73/Downloads' | sudo tee -a ~/.config/gtk-3.0/bookmarks
+echo 'file:///mnt/data/Pelis' | sudo tee -a ~/.config/gtk-3.0/bookmarks
+echo 'file:///mnt/data/Series' | sudo tee -a ~/.config/gtk-3.0/bookmarks
 echo 'file:///mnt/data' | sudo tee -a ~/.config/gtk-3.0/bookmarks
 sudo reboot
