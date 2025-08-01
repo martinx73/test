@@ -8,7 +8,7 @@ sudo apt install unrar google-chrome-stable sublime-text -y
 curl -fsS https://dl.brave.com/install.sh | sh
 sudo mkdir /mnt/data/
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
-echo 'UUID=5E3C93C53C93971D	/mnt/data	ntfs-3g	uid=1000,gid=1000,dmask=022,fmask=133,locale=es_ES.UTF-8  0  0' | sudo tee -a /etc/fstab
+echo 'UUID=5E3C93C53C93971D /mnt/data ntfs-3g uid=1000,gid=1000,dmask=0022,fmask=0022,locale=es_ES.UTF-8 0 0' | sudo tee -a /etc/fstab
 sudo apt install git build-essential meson itstool libtool pkg-config intltool libicu-dev libpcre2-dev libglib2.0-dev libgtk-3-dev libxml2-utils -y
 git clone https://github.com/cboxdoerfer/fsearch.git && cd fsearch/ && meson builddir && ninja -C builddir install
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
