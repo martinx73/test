@@ -1,5 +1,5 @@
 #SSH para SERVIDOR
-sudo apt install libpam-google-authenticator ufw -y && sudo ufw allow ssh && sudo ufw enable
+sudo apt install libpam-google-authenticator -y
 sudo tee /etc/pam.d/sshd < /dev/null
 echo 'auth required pam_google_authenticator.so' | sudo tee -a /etc/pam.d/sshd
 sudo sed -i '62c\KbdInteractiveAuthentication yes' /etc/ssh/sshd_config
