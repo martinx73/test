@@ -1,4 +1,4 @@
-sudo apt install default-jdk gparted curl ntfs-3g ufw freerdp2-x11 -y && sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw allow 22 && sudo ufw allow 22022 && sudo ufw allow 11434 && sudo ufw allow 8080 && sudo ufw allow 8006 && sudo ufw enable
+sudo apt install bleachbit default-jdk gparted curl ntfs-3g ufw freerdp2-x11 -y && sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw allow 22 && sudo ufw allow 22022 && sudo ufw allow 11434 && sudo ufw allow 8080 && sudo ufw allow 8006 && sudo ufw enable
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo tee /etc/apt/keyrings/sublimehq-pub.asc > /dev/null
 echo -e 'Types: deb\nURIs: https://download.sublimetext.com/\nSuites: apt/stable/\nSigned-By: /etc/apt/keyrings/sublimehq-pub.asc' | sudo tee /etc/apt/sources.list.d/sublime-text.sources
 sudo apt install software-properties-common -y && sudo apt-add-repository contrib non-free -y
