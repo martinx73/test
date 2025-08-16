@@ -30,6 +30,7 @@ ln -s /mnt/deskdown/Desktop/ /home/martinx73
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install ffmpeg nodejs -y
+curl -fsSL https://ollama.com/install.sh | sh
 sudo touch /etc/modprobe.d/blacklist-nouveau.conf
 echo 'blacklist nouveau' | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
 echo 'options nouveau modeset=0' | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
