@@ -35,4 +35,9 @@ sudo touch /etc/modprobe.d/blacklist-nouveau.conf
 echo 'blacklist nouveau' | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
 echo 'options nouveau modeset=0' | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
 sudo update-initramfs -u
+sudo rm -rf /etc/apt/sources.list.d/contrib.list
+sudo nmcli connection modify 'Wired connection 1' ipv4.address 192.168.100.200/24
+sudo nmcli connection modify 'Wired connection 1' ipv4.gateway 192.168.100.1
+sudo nmcli connection modify 'Wired connection 1' ipv4.method manual
+sudo nmcli connection modify 'Wired connection 1' ipv4.dns '1.1.1.1'
 sudo reboot
