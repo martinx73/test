@@ -11,9 +11,9 @@ apt-get install -y nvidia-container-toolkit
 nvidia-ctk runtime configure --runtime=docker
 systemctl set-default graphical.target
 wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
-sudo add-apt-repository contrib
-sudo apt-get update
-sudo apt-get -y install cuda-toolkit-12-4
+dpkg -i cuda-keyring_1.1-1_all.deb
+add-apt-repository contrib
+apt-get update
+apt-get -y install cuda-toolkit-12-4
 echo 'export PATH=${PATH}:/usr/local/cuda/bin' | tee -a ~/.bashrc
 reboot
