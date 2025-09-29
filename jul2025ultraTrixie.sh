@@ -1,3 +1,4 @@
+sudo apt install curl
 sudo sed -i 's/non-free-firmware/non-free-firmware contrib non-free/g' /etc/apt/sources.list
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo tee /etc/apt/keyrings/sublimehq-pub.asc > /dev/null
 echo -e 'Types: deb\nURIs: https://download.sublimetext.com/\nSuites: apt/stable/\nSigned-By: /etc/apt/keyrings/sublimehq-pub.asc' | sudo tee /etc/apt/sources.list.d/sublime-text.sources
@@ -10,11 +11,9 @@ wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.g
 echo -e 'Types: deb\nURIs: https://download.vscodium.com/debs\nSuites: vscodium\nComponents: main\nArchitectures: amd64 arm64\nSigned-by: /usr/share/keyrings/vscodium-archive-keyring.gpg' \
 | sudo tee /etc/apt/sources.list.d/vscodium.sources
 sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
-sudo apt install bleachbit default-jdk gparted curl ufw freerdp3-x11 smplayer unrar google-chrome-stable sublime-text codium ffmpeg -y && sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw enable
+sudo apt install bleachbit default-jdk gparted ufw freerdp3-x11 smplayer unrar google-chrome-stable sublime-text codium ffmpeg -y && sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw enable
 curl -fsS https://dl.brave.com/install.sh | sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-\. "$HOME/.nvm/nvm.sh"
-nvm install 22
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash && source ~/.bashrc && nvm install 22
 sudo mkdir /mnt/data/
 echo 'UUID=5E3C93C53C93971D /mnt/data ntfs-3g uid=1000,gid=1000,dmask=0022,fmask=0022,locale=es_ES.UTF-8 0 0' | sudo tee -a /etc/fstab
 sudo sed -i '8c\XDG_DESKTOP_DIR="/mnt/data/x/Desktop"' ~/.config/user-dirs.dirs
