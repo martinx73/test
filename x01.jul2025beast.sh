@@ -1,7 +1,7 @@
 apt install bleachbit mc default-jdk gparted curl ntfs-3g ufw freerdp2-x11 -y && ufw default deny incoming && ufw default allow outgoing && ufw allow 22 && ufw allow 22022 && ufw allow 11434 && ufw allow 8080 && ufw allow 8006 && ufw allow 5678 && ufw allow 9443 && ufw enable
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | tee /etc/apt/keyrings/sublimehq-pub.asc > /dev/null
 echo -e 'Types: deb\nURIs: https://download.sublimetext.com/\nSuites: apt/stable/\nSigned-By: /etc/apt/keyrings/sublimehq-pub.asc' | tee /etc/apt/sources.list.d/sublime-text.sources
-apt install software-properties-common -y && apt-add-repository contrib non-free -y
+sed -i 's/non-free-firmware/non-free-firmware contrib non-free/g' /etc/apt/sources.list
 curl -fSsL https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | tee /usr/share/keyrings/google-chrome.gpg >> /dev/null && echo deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main | tee /etc/apt/sources.list.d/google-chrome.list
 echo 'deb http://download.opensuse.org/repositories/home:/smplayerdev/Debian_12/ /' | tee /etc/apt/sources.list.d/home:smplayerdev.list
 curl -fsSL https://download.opensuse.org/repositories/home:smplayerdev/Debian_12/Release.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/home_smplayerdev.gpg > /dev/null
