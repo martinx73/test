@@ -26,7 +26,7 @@ sudo rm -rf /home/martinx73/Desktop
 ln -s /mnt/deskdown/Downloads/ /home/martinx73
 ln -s /mnt/deskdown/Desktop/ /home/martinx73
 sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash && source ~/.bashrc && nvm install 22
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash && source ~/.bashrc && nvm install 24
 sudo touch /etc/modprobe.d/blacklist-nouveau.conf
 echo 'blacklist nouveau' | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
 echo 'options nouveau modeset=0' | sudo tee -a /etc/modprobe.d/blacklist-nouveau.conf
