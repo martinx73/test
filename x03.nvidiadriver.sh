@@ -38,4 +38,5 @@
 # #https://medium.com/codex/install-nvidia-drivers-cuda-on-debian-12-bookworm-nvidia-smi-69d2980247c6
 sudo apt install -y nvidia-driver firmware-misc-nonfree
 sudo apt install -y nvidia-driver nvidia-smi nvidia-settings
+sudo systemctl set-default graphical.target
 sudo reboot

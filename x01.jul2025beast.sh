@@ -122,8 +122,8 @@ configure_fstab() {
     read -p "Do you want to proceed with modifying /etc/fstab? (y/N) " choice
     case "$choice" in
       y|Y )
-        mkdir -p /mnt/catorce/
-        mkdir -p /mnt/deskdown/
+        sudo mkdir -p /mnt/catorce/
+        sudo mkdir -p /mnt/deskdown/
         echo 'UUID=96BE5A3DBE5A1659 /mnt/catorce ntfs-3g uid=1000,gid=1000,dmask=022,fmask=133,locale=es_ES.UTF-8 0 0' | sudo tee -a /etc/fstab
         echo 'UUID=B09CAA479CAA07C4 /mnt/deskdown ntfs-3g uid=1000,gid=1000,dmask=022,fmask=133,locale=es_ES.UTF-8 0 0' | sudo tee -a /etc/fstab
         info "/etc/fstab modified."
