@@ -142,7 +142,7 @@ build_fsearch() {
     sudo meson builddir
     sudo ninja -C builddir install
     cd -
-    rm -rf "$tmp_dir"
+    sudo rm -rf "$tmp_dir"
     info "FSearch installation complete."
 }
 
@@ -156,8 +156,8 @@ customize_user_env() {
     fi
 
     # Remove old dirs and create symlinks
-    rm -rf "$HOME/Downloads"
-    rm -rf "$HOME/Desktop"
+    sudo rm -rf "$HOME/Downloads"
+    sudo rm -rf "$HOME/Desktop"
     ln -s /mnt/deskdown/Downloads/ "$HOME"
     ln -s /mnt/deskdown/Desktop/ "$HOME"
 
