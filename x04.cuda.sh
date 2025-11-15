@@ -1,13 +1,10 @@
 sudo apt install -y nvidia-cuda-toolkit nvidia-cuda-dev
-
 # Agrega esto a tu ~/.bashrc:
-# export PATH=/usr/local/cuda/bin:$PATH
-# export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
-# export CUDA_HOME=/usr/local/cuda
-
+echo 'export PATH=/usr/local/cuda/bin:$PATH' >> /home/martinx73/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> /home/martinx73/.bashrc
+echo 'export CUDA_HOME=/usr/local/cuda' >> /home/martinx73/.bashrc
 # LUEGO
-# source ~/.bashrc
-
+source ~/.bashrc
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey \
     | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
 curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list \
