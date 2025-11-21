@@ -1,0 +1,6 @@
+sudo systemctl edit docker.service
+
+[Service]
+Environment=DOCKER_MIN_API_VERSION=1.24
+
+sudo systemctl restart docker
