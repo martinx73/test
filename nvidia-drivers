@@ -1,20 +1,20 @@
 Package: *nvidia*
-Pin: version 580.105.08
+Pin: version 560.35.05-1
 Pin-Priority: 1001
 
 Package: cuda-drivers*
-Pin: version 580.105.08
+Pin: version 560.35.05-1
 Pin-Priority: 1001
 
 Package: libcuda*
-Pin: version 580.105.08
+Pin: version 560.35.05-1
 Pin-Priority: 1001
 
 
 Package: libxnvctrl* 
-Pin: version 580.105.08
+Pin: version 560.35.05-1
 Pin-Priority: 1001
 
 Package: libnv*
-Pin: version 580.105.08
+Pin: version 560.35.05-1
 Pin-Priority: 1001
