@@ -1,4 +1,9 @@
-sudo apt install -y nvidia-cuda-toolkit nvidia-cuda-dev
+wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb
+sudo dpkg -i cuda-keyring_1.1-1_all.deb
+sudo apt-get update
+sudo apt-get install cuda-toolkit-12-4 -y
+sudo apt-get install cuda-drivers -y
+sudo apt-get install nvidia-cuda-dev -y
 # Agrega esto a tu ~/.bashrc:
 echo 'export PATH=/usr/local/cuda/bin:$PATH' >> /home/martinx73/.bashrc
 echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> /home/martinx73/.bashrc
@@ -11,7 +16,7 @@ curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-contai
     | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' \
     | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 sudo apt-get update
-sudo apt-get install -y nvidia-container-toolkit
+sudo apt-get install nvidia-container-toolkit -y
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 sudo docker run --rm --gpus all nvidia/cuda:12.3.2-base-ubuntu22.04 nvidia-smi

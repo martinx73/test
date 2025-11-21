@@ -40,6 +40,7 @@ install_base_packages() {
     sudo apt-get update
     sudo apt-get install -y \
         software-properties-common \
+        firmware-misc-nonfree \
         bleachbit \
         mc \
         default-jdk \
