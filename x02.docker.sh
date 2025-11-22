@@ -7,6 +7,8 @@
 #  tee /etc/apt/sources.list.d/docker.list > /dev/null
 #  apt-get update &&
 #apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+sudo sed -i 's/non-free-firmware/non-free-firmware contrib non-free/g' /etc/apt/sources.list
+sudo apt update
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh ./get-docker.sh
 sudo docker volume create portainer_data
