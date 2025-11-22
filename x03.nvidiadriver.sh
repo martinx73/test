@@ -2,7 +2,7 @@
 
 sudo cp nvidia-drivers /etc/apt/preferences.d/
 sudo apt update
-sudo apt install nvidia-driver nvidia-smi nvidia-driver
+sudo apt install nvidia-driver nvidia-smi nvidia-driver -y
 sudo reboot
 
 
