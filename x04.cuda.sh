@@ -1,7 +1,12 @@
-wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
+#wget https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb
+#sudo dpkg -i cuda-keyring_1.1-1_all.deb
+#sudo apt-get update
+#sudo apt-get install cuda-toolkit-12-4 -y
+sudo dpkg -i /home/martinx73/Downloads/cuda-repo-debian12-12-4-local_12.4.0-550.54.14-1_amd64.deb
+sudo cp /var/cuda-repo-debian12-12-4-local/cuda-*-keyring.gpg /usr/share/keyrings/
+sudo add-apt-repository contrib
 sudo apt-get update
-sudo apt-get install cuda-toolkit-12-4 -y
+sudo apt-get -y install cuda-toolkit-12-4
 #sudo apt-get install cuda-drivers -y
 #sudo apt-get install nvidia-cuda-dev -y
 # Agrega esto a tu ~/.bashrc:
